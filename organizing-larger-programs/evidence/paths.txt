@@ -1,0 +1,35 @@
+➜  organizing-larger-programs pipenv run python
+Python 3.9.2 (default, Jun 22 2021, 09:35:52) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import path_test
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'path_test'
+>>> import sys
+>>> sys.path.append(
+... 'not_searched')
+>>> 
+>>> import path_test
+Python found me!
+>>> 
+KeyboardInterrupt
+>>> 
+➜  organizing-larger-programs PYTHONPATH=not_searched pipenv run pythobn
+Error: the command pythobn could not be found within PATH or Pipfile's [scripts].
+➜  organizing-larger-programs 
+➜  organizing-larger-programs PYTHONPATH=not_searched pipenv run python 
+Python 3.9.2 (default, Jun 22 2021, 09:35:52) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import path_test
+Python found me!
+>>> sys.path
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'sys' is not defined
+>>> import sys
+>>> sys.path
+['', '/home/jguerra/Documents/Training/Python/python-core/organizing-larger-programs/not_searched', '/home/jguerra/.asdf/installs/python/3.9.2/lib/python39.zip', '/home/jguerra/.asdf/installs/python/3.9.2/lib/python3.9', '/home/jguerra/.asdf/installs/python/3.9.2/lib/python3.9/lib-dynload', '/home/jguerra/.local/share/virtualenvs/organizing-larger-programs-46C8uUm8/lib/python3.9/site-packages']
+>>> 
+

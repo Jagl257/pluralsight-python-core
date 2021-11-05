@@ -1,0 +1,15 @@
+Python 3.9.2 (default, Jun 22 2021, 09:35:52) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from function_factories import raise_to
+>>> square = raise_to(2)
+>>> square(2)
+4
+>>> square(4)
+16
+>>> square(6)
+36
+>>> square(10)
+100
+>>> 
+

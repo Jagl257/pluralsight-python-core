@@ -1,0 +1,62 @@
+➜  functions_and_functional_programming pipenv run python 
+Python 3.9.2 (default, Jun 22 2021, 09:35:52) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import hypervolume as h
+>>> 
+>>> h.hypervolume_explained(3,4,5,6,6,7)
+(3, 4, 5, 6, 6, 7)
+<class 'tuple'>
+>>> h.hypervolume(2,3,4)
+24
+>>> 
+
+----------------------------------------------------------------------------
+
+➜  functions_and_functional_programming pipenv run python      
+Python 3.9.2 (default, Jun 22 2021, 09:35:52) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import hypervolume as h
+>>> h.hypervolume()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/jguerra/Documents/Training/Python/python-core/functions_and_functional_programming/hypervolume.py", line 13, in hypervolume
+    v = next(i)
+StopIteration
+>>> h.hypervolume
+h.hypervolume(            h.hypervolume_TypeError(  h.hypervolume_explained(  
+>>> h.hypervolume_TypeError()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: hypervolume_TypeError() missing 1 required positional argument: 'length'
+>>> 
+
+________________________________________________________________________________________
+
+
+➜  functions_and_functional_programming pipenv run python      
+
+Python 3.9.2 (default, Jun 22 2021, 09:35:52) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+>>> import hypervolume as h
+>>> h.hypervolume
+h.hypervolume(            h.hypervolume_TypeError(  h.hypervolume_explained(  
+>>> h.kw_hypervolume(a=3, b=3, c=5)
+{'a': 3, 'b': 3, 'c': 5}
+<class 'dict'>
+>>> 
+
+______________________________________________________________________________________________
+
+➜  functions_and_functional_programming pipenv run python      
+Python 3.9.2 (default, Jun 22 2021, 09:35:52) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import hypervolume as h
+>>> h.tag("img", src="Monet.jpeg", alt="Sunrise by Claude Monet", border="1")
+'<imgsrc= "Monet.jpeg""alt= "Sunrise by Claude Monet""border= "1"">'
+>>> 
+

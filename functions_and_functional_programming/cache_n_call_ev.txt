@@ -1,0 +1,20 @@
+➜  functions_and_functional_programming pipenv run python
+Python 3.9.2 (default, Jun 22 2021, 09:35:52) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from resolver import Resolver
+>>> resolver = Resolver()
+>>> resolver("www.pluralsight.com")
+'104.19.161.127'
+>>> from timeit import timeit
+>>> resolver._cache()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'dict' object is not callable
+>>> resolver._cache
+{'www.pluralsight.com': '104.19.161.127'}
+>>> timeit(setup="from __main__ import resolver", stmt="resolver('google.com')",number=1)
+0.011224040004890412
+>>> timeit(setup="from __main__ import resolver", stmt="resolver('google.com')",number=1)
+6.841000868007541e-06
+

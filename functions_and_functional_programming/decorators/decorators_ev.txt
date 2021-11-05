@@ -1,0 +1,48 @@
+➜  decorators pipenv run python       
+^[[A^[[APython 3.9.2 (default, Jun 22 2021, 09:35:52) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from example import hello
+>>> hello('Jorge')
+Hello, Jorge
+>>> Hello('Andres')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'Hello' is not defined
+>>> hello('Andres')
+Hello, Andres
+>>> hello('fulgencio')
+Hello, fulgencio
+>>> hello('Cris')
+Hello, Cris
+>>> hello.count
+4
+>>> 
+
+
+## Lossing Metadata
+
+pipenv run python
+Python 3.9.2 (default, Jun 22 2021, 09:35:52) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> def hello():
+...     "Print a well-know message"
+...     print("hello world")
+... 
+>>> hello.__name__
+'hello'
+>>> hello.__doc__
+'Print a well-know message'
+>>> 
+>>> from utils_decorators import noop
+>>> 
+>>> @noop
+... def hello():
+...     "Print a well-know message"
+...     print("hello world")
+... 
+>>> hello.__name__
+'noop_wrapper'
+>>> help(hello)
+

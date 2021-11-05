@@ -1,0 +1,43 @@
+Python 3.9.2 (default, Jun 22 2021, 09:35:52) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from classes import ShippingContainer
+>>> 
+>>> a = ShippingContainer(123, ["books"])
+>>> a.co
+a.code              a.container_serial  a.contents          
+>>> a.co
+a.code              a.container_serial  a.contents          
+>>> a.code
+123
+>>> a.cont
+a.container_serial  a.contents          
+>>> a.cont
+a.container_serial  a.contents          
+>>> a.cont
+a.container_serial  a.contents          
+>>> a.contents
+['books']
+>>> a.container_serial
+1
+>>> b = ShippingContainer(234, ["pencils"])
+>>> b.code
+234
+>>> b.contents
+['pencils']
+>>> b.container_serial
+2
+>>> 
+
+__________________________________________________________________________
+
+>>> dictionary = {'code':123, 'contents': ["books"]}
+>>> ShippingContainer.create_from_dict(dictionary)
+<classes.ShippingContainer object at 0x7f01b2c58e20>
+>>> a = ShippingContainer.create_from_dict(dictionary)
+>>> a.code
+123
+>>> a.contents
+['books']
+>>> 
+

@@ -1,0 +1,14 @@
+Python 3.9.2 (default, Jun 22 2021, 09:35:52) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import local_functions as f
+>>> f.function_1
+<function function_1 at 0x7fb2912cb430>
+>>> f.function_1()
+Hello I am an inner funtion
+>>> f.function_2()
+<function function_2.<locals>.inner_function at 0x7fb2912cb3a0>
+>>> inner = f.function_2()
+>>> inner(2,3)
+2 + 3 = 5
+

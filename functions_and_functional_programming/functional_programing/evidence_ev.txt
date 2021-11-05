@@ -1,0 +1,127 @@
+Python 3.9.2 (default, Jun 22 2021, 09:35:52) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from useful_callables import Trace
+>>> 
+>>> result = map(Trace()(ord), "Just Another Vague Acronym")
+>>> 
+>>> next(result)
+Calling <built-in function ord>
+74
+>>> next(result)
+Calling <built-in function ord>
+117
+>>> next(result)
+Calling <built-in function ord>
+115
+>>> for item in result
+  File "<stdin>", line 1
+    for item in result
+                      ^
+SyntaxError: invalid syntax
+>>> for item in result:
+...     print(item)
+... 
+Calling <built-in function ord>
+116
+Calling <built-in function ord>
+32
+Calling <built-in function ord>
+65
+Calling <built-in function ord>
+110
+Calling <built-in function ord>
+111
+Calling <built-in function ord>
+116
+Calling <built-in function ord>
+104
+Calling <built-in function ord>
+101
+Calling <built-in function ord>
+114
+Calling <built-in function ord>
+32
+Calling <built-in function ord>
+86
+Calling <built-in function ord>
+97
+Calling <built-in function ord>
+103
+Calling <built-in function ord>
+117
+Calling <built-in function ord>
+101
+Calling <built-in function ord>
+32
+Calling <built-in function ord>
+65
+Calling <built-in function ord>
+99
+Calling <built-in function ord>
+114
+Calling <built-in function ord>
+111
+Calling <built-in function ord>
+110
+Calling <built-in function ord>
+121
+Calling <built-in function ord>
+109
+>>> 
+
+__________________________________________________________________
+
+Python 3.9.2 (default, Jun 22 2021, 09:35:52) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a =[1,2,3,4,5]
+>>> 
+>>> result = map(lambda x,y,z: x+y+z, a,a,a) 
+>>> list(result)
+[3, 6, 9, 12, 15]
+>>> 
+>>> 
+>>> a = "HHH"
+>>> b = "OEA"
+>>> c = "LLL"
+>>> d = "ALL"
+>>> e = "!OO"
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> result = map(lambda a,b,c,d,e: (a,b,c,d,e), a,b,c,d,e)
+>>> for item in result:
+...     print(item)
+... 
+('H', 'O', 'L', 'A', '!')
+('H', 'E', 'L', 'L', 'O')
+('H', 'A', 'L', 'L', 'O')
+>>> 
+
+___________________________________________________________________
+
+
+Python 3.9.2 (default, Jun 22 2021, 09:35:52) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from users import *
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'users'
+>>> from useful_callables import numbering_elements
+>>> 
+>>> animals = ["cow", "cat", "dog", "chicken", "condor"]
+>>> result = numbering_elements(animals)
+>>> 
+>>> for item in result:
+...     print(item)
+... 
+(0, 'cow')
+(1, 'cat')
+(2, 'dog')
+(3, 'chicken')
+(4, 'condor')
+
